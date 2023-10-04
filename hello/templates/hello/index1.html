@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./static/style.css" />
+    <style>
+      body {
+        text-align: center;
+        background: linear-gradient(to bottom left, skyblue, white);
+        width: 100vh;
+        height: 100vh;
+      }
+      h1 {
+        margin-left: 680px;
+      }
+      form {
+        position: relative;
+        left: 370px;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+      }
+
+      button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .status::before {
+        color: green;
+      }
+
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <form action="/register" method="post" id="form">
+      <div>
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" />
+        <span class="valid"></span>
+        <span class="error"></span>
+      </div>
+      <div>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" />
+        <span class="valid"></span>
+        <span class="error"></span>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" />
+        <span class="valid"></span>
+        <span class="error"></span>
+      </div>
+      <div>
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm_password" name="confirm_password" />
+        <span class="valid"></span>
+        <span class="error"></span>
+      </div>
+      <div>
+        <label for="date_of_birth">Date of Birth</label>
+        <input type="date" id="date_of_birth" name="date_of_birth" />
+        <span class="valid"></span>
+        <span class="error"></span>
+      </div>
+      <button type="submit" id="submit-button">Register</button>
+    </form>
+    <a href="{% url 'about' %}">Visit My View</a>
+  </body>
+</html>
